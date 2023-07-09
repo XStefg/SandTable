@@ -19,6 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="SandTableEngine.dll">
+      <HintPath>$(TargetDir)SandTableEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="Eddyfi.Core.Utilities">
       <HintPath>$(TargetDir)Eddyfi.Core.Utilities.dll</HintPath>
     </Reference>
