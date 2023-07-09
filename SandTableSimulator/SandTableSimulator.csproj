@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Eddyfi.Core.Utilities">
+      <HintPath>$(TargetDir)Eddyfi.Core.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonUIControls.Wpf">
+      <HintPath>$(TargetDir)CommonUIControls.Wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

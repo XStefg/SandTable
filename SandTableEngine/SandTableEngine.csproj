@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net7.0;net7.0-windows</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Eddyfi.Core.Utilities">
+      <HintPath>$(TargetDir)Eddyfi.Core.Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

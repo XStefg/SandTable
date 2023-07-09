@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+
+    <OutputPath>$(SolutionDir)$(Configuration)</OutputPath>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <CoreRepositoryDir>$(MSBuildThisFileDirectory)..\Core\</CoreRepositoryDir>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,1252 @@
+{
+  "Ignored": [
+    "Automation.TestingApi",
+    "Eddyfi.Skynet.Interfaces",
+    "Eddyfi.Skynet.Interfaces",
+    "Eddyfi.Skynet.Server",
+    "Reinforced.Typings",
+    "Eddyfi.Syncfusion",
+    "Inuktun.DeviceEmulator",
+    "Microsoft.NETCore.Platforms",
+    "Microsoft.NETCore.Targets",
+    "Microsoft.TestPlatform.ObjectModel",
+    "NETStandard.Library",
+    "Owin",
+    "runtime.native.System",
+    "wclCommon",
+    "wclWiFiFramework",
+    "xunit.runner.visualstudio"
+  ],
+  "Config": [
+    {
+      "ActiproSoftware.Controls.WPF.Charts": "22.1.3"
+    },
+    {
+      "ActiproSoftware.Controls.WPF.DataGrid.Contrib": "22.1.3"
+    },
+    {
+      "ActiproSoftware.Controls.WPF.Docking": "22.1.3"
+    },
+    {
+      "ActiproSoftware.Controls.WPF.Editors": "22.1.3"
+    },
+    {
+      "ActiproSoftware.Controls.WPF.Gauge": "22.1.3"
+    },
+    {
+      "ActiproSoftware.Controls.WPF.Grids": "22.1.3"
+    },
+    {
+      "ActiproSoftware.Controls.WPF.Ribbon": "22.1.3"
+    },
+    {
+      "ActiproSoftware.Controls.WPF.Shared": "22.1.3"
+    },
+    {
+      "ActiproSoftware.Controls.WPF.Shell": "22.1.3"
+    },
+    {
+      "ActiproSoftware.Controls.WPF.Views": "22.1.3"
+    },
+    {
+      "ActiproSoftware.Controls.WPF.Wizard": "22.1.3"
+    },
+    {
+      "AgileObjects.NetStandardPolyfills": "1.6.0"
+    },
+    {
+      "AgileObjects.ReadableExpressions": "3.3.0"
+    },
+    {
+      "AngleSharp": "0.16.1"
+    },
+    {
+      "AngleSharp.Css": "0.16.4"
+    },
+    {
+      "Asp.Versioning.Abstractions": "6.2.0"
+    },
+    {
+      "Asp.Versioning.WebApi": "6.3.0"
+    },
+    {
+      "Autofac": "6.4.0"
+    },
+    {
+      "Autofac.Owin": "7.0.0"
+    },
+    {
+      "Autofac.WebApi2": "6.1.1"
+    },
+    {
+      "Autofac.WebApi2.Owin": "6.1.0"
+    },
+    {
+      "Autofac.Extensions.DependencyInjection": "8.0.0"
+    },
+    {
+      "AutoFixture": "4.17.0"
+    },
+    {
+      "AutoFixture.AutoNSubstitute": "4.17.0"
+    },
+    {
+      "Automation.WebClient": "2.0.0"
+    },
+    {
+      "AvalonEdit": "6.1.3.50"
+    },
+    {
+      "Azure.Core": "1.25.0"
+    },
+    {
+      "Azure.Storage.Blobs": "12.14.1"
+    },
+    {
+      "Azure.Storage.Common": "12.13.0"
+    },
+    {
+      "BenchmarkDotNet": "0.13.5"
+    },
+    {
+      "CalcBinding": "2.5.2"
+    },
+    {
+      "Castle.Core": "5.1.0"
+    },
+    {
+      "cef.redist.x64": "107.1.4"
+    },
+    {
+      "cef.redist.x86": "107.1.4"
+    },
+    {
+      "CefSharp.Common": "107.1.40"
+    },
+    {
+      "CefSharp.Common.NETCore": "107.1.40"
+    },
+    {
+      "CefSharp.OffScreen": "107.1.40"
+    },
+    {
+      "CefSharp.Wpf": "107.1.40"
+    },
+    {
+      "CefSharp.Wpf.NETCore": "107.1.40"
+    },
+    {
+      "CommandLineParser": "2.9.1"
+    },
+    {
+      "CommonServiceLocator": "2.0.6"
+    },
+    {
+      "Dapper": "2.0.123"
+    },
+    {
+      "Dapper.Contrib": "2.0.78"
+    },
+    {
+      "DeviceManagementPackage": "0.1.0"
+    },
+    {
+      "Discutils": "0.16.3"
+    },
+    {
+      "DocumentFormat.OpenXml": "2.9.1"
+    },
+    {
+      "DynamicExpresso.Core": "2.3.1"
+    },
+    {
+      "Eddyfi.AI.EvaluationEngine.Core": "6.1.0"
+    },
+    {
+      "Eddyfi.CloudPlatform.Configuration": "1.0.1"
+    },
+    {
+      "Eddyfi.Core": "19.9.1"
+    },
+    {
+      "Eddyfi.Core.Utilities": "1.0.0"
+    },
+    {
+      "Eddyfi.Licensing.WebApi": "1.0.1"
+    },
+    {
+      "eddyfi.intelmkl.core_2021_3_0": "1.0.6"
+    },
+    {
+      "EFCore.BulkExtensions": "6.5.6"
+    },
+    {
+      "Emgu.CV": "4.5.5.4823"
+    },
+    {
+      "Emgu.CV.Bitmap": "4.5.5.4823"
+    },
+    {
+      "Emgu.CV.runtime.windows": "4.5.5.4823"
+    },
+    {
+      "Fare": "2.2.1"
+    },
+    {
+      "FFMpegCore": "4.8.0"
+    },
+    {
+      "Fizzler": "1.2.0"
+    },
+    {
+      "FlaUI.Core": "3.2.0"
+    },
+    {
+      "FlaUI.UIA2": "3.2.0"
+    },
+    {
+      "FlaUI.UIA3": "3.2.0"
+    },
+    {
+      "Flee": "1.2.2"
+    },
+    {
+      "FluentAssertions": "6.8.0"
+    },
+    {
+      "FluentValidation": "11.2.2"
+    },
+    {
+      "Google.Protobuf": "3.14.0"
+    },
+    {
+      "Grpc": "2.33.1"
+    },
+    {
+      "Grpc.Core": "2.33.1"
+    },
+    {
+      "Grpc.Core.Api": "2.33.1"
+    },
+    {
+      "Grpc.Tools": "2.33.1"
+    },
+    {
+      "Hardcodet.NotifyIcon.Wpf": "1.1.0"
+    },
+    {
+      "HASP": "5.10.2.2"
+    },
+    {
+      "HelixToolkit.Wpf": "2015.1.715"
+    },
+    {
+      "HDF.PInvoke.NETStandard": "1.10.502"
+    },
+    {
+      "HDF5DotNet.x64": "1.8.9"
+    },
+    {
+      "HPCsharp": "3.16.5"
+    },
+    {
+      "Interop.UIAutomationClient": "10.18362.0"
+    },
+    {
+      "JetBrains.Annotations": "2019.1.3"
+    },
+    {
+      "LiteDB": "5.0.12"
+    },
+    {
+      "Magick.NET-Q8-x64": "12.2.0"
+    },
+    {
+      "Magick.NET.Core": "12.2.0"
+    },
+    {
+      "MagicOnion": "3.0.13"
+    },
+    {
+      "MagicOnion.Abstractions": "3.0.13"
+    },
+    {
+      "ManagedEsent": "2.0.0"
+    },
+    {
+      "MathNet.Filtering": "0.7.0"
+    },
+    {
+      "MathNet.Numerics": "5.0.0"
+    },
+    {
+      "MathNet.Numerics.MKL.Win-x64": "3.0.0"
+    },
+    {
+      "MathNet.Numerics.OpenBLAS.Win": "0.2.0"
+    },
+    {
+      "MathNet.Numerics.Providers.MKL": "5.0.0"
+    },
+    {
+      "MathNet.Spatial": "0.6.0"
+    },
+    {
+      "MessagePack": "2.4.35"
+    },
+    {
+      "MessagePack.Annotations": "2.4.35"
+    },
+    {
+      "Microsoft.ApplicationInsights": "2.21.0"
+    },
+    {
+      "Microsoft.AspNetCore.Owin": "5.0.12"
+    },
+    {
+      "Microsoft.AspNet.WebApi": "5.2.9"
+    },
+    {
+      "Microsoft.AspNet.WebApi.Client": "5.2.9"
+    },
+    {
+      "Microsoft.AspNet.WebApi.Core": "5.2.9"
+    },
+    {
+      "Microsoft.AspNet.WebApi.Owin": "5.2.9"
+    },
+    {
+      "Microsoft.AspNet.WebApi.OwinSelfHost": "5.2.9"
+    },
+    {
+      "Microsoft.AspNet.WebApi.Versioning": "5.1.0"
+    },
+    {
+      "Microsoft.AspNet.WebApi.Versioning.ApiExplorer": "5.1.0"
+    },
+    {
+      "Microsoft.AspNet.WebApi.WebHost": "5.2.9"
+    },
+    {
+      "Microsoft.Azure.KeyVault.Core": "1.0.0"
+    },
+    {
+      "Microsoft.Azure.Storage.Blob": "11.1.6"
+    },
+    {
+      "Microsoft.Azure.Storage.Common": "11.1.6"
+    },
+    {
+      "Microsoft.Bcl.AsyncInterfaces": "6.0.0"
+    },
+    {
+      "Microsoft.CodeAnalysis.Analyzers": "3.3.3"
+    },
+    {
+      "Microsoft.CodeAnalysis.Common": "4.3.1"
+    },
+    {
+      "Microsoft.CodeAnalysis.CSharp": "4.3.1"
+    },
+    {
+      "Microsoft.CodeAnalysis.CSharp.Features": "4.3.1"
+    },
+    {
+      "Microsoft.CodeAnalysis.CSharp.Scripting": "4.3.1"
+    },
+    {
+      "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.3.1"
+    },
+    {
+      "Microsoft.CodeAnalysis.Features": "4.3.1"
+    },
+    {
+      "Microsoft.CodeAnalysis.FlowAnalysis.Utilities": "2.9.6"
+    },
+    {
+      "Microsoft.CodeAnalysis.Scripting.Common": "3.4.0"
+    },
+    {
+      "Microsoft.CodeAnalysis.Workspaces.Common": "3.4.0"
+    },
+    {
+      "Microsoft.CodeDom.Providers.DotNetCompilerPlatform": "3.6.0"
+    },
+    {
+      "Microsoft.CSharp": "4.7.0"
+    },
+    {
+      "Microsoft.Data.Edm": "5.8.5"
+    },
+    {
+      "Microsoft.Data.OData": "5.8.5"
+    },
+    {
+      "Microsoft.Data.Services.Client": "5.8.5"
+    },
+    {
+      "Microsoft.Data.Sqlite": "6.0.10"
+    },
+    {
+      "Microsoft.Data.Sqlite.Core": "6.0.10"
+    },
+    {
+      "Microsoft.DiaSymReader": "1.4.0"
+    },
+    {
+      "Microsoft.EntityFrameworkCore": "6.0.10"
+    },
+    {
+      "Microsoft.EntityFrameworkCore.InMemory": "6.0.10"
+    },
+    {
+      "Microsoft.EntityFrameworkCore.Proxies": "6.0.10"
+    },
+    {
+      "Microsoft.EntityFrameworkCore.Sqlite": "6.0.10"
+    },
+    {
+      "Microsoft.EntityFrameworkCore.Sqlite.Core": "6.0.10"
+    },
+    {
+      "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
+    },
+    {
+      "Microsoft.EntityFrameworkCore.Tools": "6.0.10"
+    },
+    {
+      "Microsoft.Extensions.Caching.Abstractions": "6.0.0"
+    },
+    {
+      "Microsoft.Extensions.Caching.Memory": "6.0.0"
+    },
+    {
+      "Microsoft.Extensions.Configuration": "2.1.1"
+    },
+    {
+      "Microsoft.Extensions.Configuration.Abstractions": "2.1.1"
+    },
+    {
+      "Microsoft.Extensions.Configuration.Binder": "2.1.1"
+    },
+    {
+      "Microsoft.Extensions.DependencyInjection": "2.1.1"
+    },
+    {
+      "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+    },
+    {
+      "Microsoft.Extensions.FileSystemGlobbing": "6.0.0"
+    },
+    {
+      "Microsoft.Extensions.Hosting": "6.0.1"
+    },
+    {
+      "Microsoft.Extensions.Logging": "2.1.1"
+    },
+    {
+      "Microsoft.Extensions.Logging.Abstractions": "6.0.0"
+    },
+    {
+      "Microsoft.Extensions.Logging.ApplicationInsights": "2.21.0"
+    },
+    {
+      "Microsoft.Extensions.Options": "6.0.0"
+    },
+    {
+      "Microsoft.Extensions.Primitives": "6.0.0"
+    },
+    {
+      "Microsoft.IdentityModel.Abstractions": "6.25.0"
+    },
+    {
+      "Microsoft.IdentityModel.JsonWebTokens": "6.25.0"
+    },
+    {
+      "Microsoft.IdentityModel.Logging": "6.25.0"
+    },
+    {
+      "Microsoft.Identity.Client": "4.47.2"
+    },
+    {
+      "Microsoft.IdentityModel.Tokens": "6.25.0"
+    },
+    {
+      "Microsoft.IdentityModel.Protocol.Extensions": "1.0.4.403061554"
+    },
+    {
+      "Microsoft.NET.StringTools": "1.0.0"
+    },
+    {
+      "Microsoft.NET.Test.Sdk": "17.3.2"
+    },
+    {
+      "Microsoft.NETCore.Platforms": "6.0.6"
+    },
+    {
+      "Microsoft.Owin": "4.2.2"
+    },
+    {
+      "Microsoft.Owin.Host.HttpListener": "4.2.2"
+    },
+    {
+      "Microsoft.Owin.Hosting": "4.2.2"
+    },
+    {
+      "Microsoft.Xaml.Behaviors.Wpf": "1.1.39"
+    },
+    {
+      "Microsoft.Web.Infrastructure": "1.0.0"
+    },
+    {
+      "Microsoft.Win32.Primitives": "4.3.0"
+    },
+    {
+      "Microsoft.Win32.Registry": "4.7.0"
+    },
+    {
+      "Microsoft.Win32.SystemEvents": "6.0.0"
+    },
+    {
+      "Microsoft.Windows.SDK.Contracts": "10.0.22621.2"
+    },
+    {
+      "Mono.Posix-4.5": "4.5.0"
+    },
+    {
+      "morelinq": "3.3.2"
+    },
+    {
+      "MSTest.TestAdapter": "2.2.10"
+    },
+    {
+      "MSTest.TestFramework": "2.2.10"
+    },
+    {
+      "NalpeironCMAP": "1.0.6"
+    },
+    {
+      "MvvmLightLibs": "5.4.1.1"
+    },
+    {
+      "MvvmLightLibsStd10": "5.4.1.1"
+    },
+    {
+      "NalpeironAssist": "1.0.1"
+    },
+    {
+      "NalpeironFloormap": "1.0.6"
+    },
+    {
+      "NalpeironIcon": "1.0.2"
+    },
+    {
+      "NalpeironLyft": "1.0.7"
+    },
+    {
+      "NalpeironMagnifi": "1.0.2"
+    },
+    {
+      "NalpeironSampleApplication": "1.0.6"
+    },
+    {
+      "NalpeironSkylark": "1.0.2"
+    },
+    {
+      "NalpeironTubePro": "1.0.0"
+    },
+    {
+      "NalpeironTubePro": "1.0.0"
+    },
+    {
+      "NETStandard.Library": "2.0.3"
+    },
+    {
+      "Newtonsoft.Json": "13.0.1"
+    },
+    {
+      "NLog": "5.0.5"
+    },
+    {
+      "NPOI": "2.5.6"
+    },
+    {
+      "NSubstitute": "4.4.0"
+    },
+    {
+      "NuGet.CommandLine": "6.3.1"
+    },
+    {
+      "OpenCvSharp3-AnyCPU": "3.4.1.20180319"
+    },
+    {
+      "Owin": "1.0"
+    },
+    {
+      "PDFsharp-MigraDoc": "1.50.5147"
+    },
+    {
+      "PDFsharp-MigraDoc-gdi": "1.50.5147"
+    },
+    {
+      "PDFsharp": "1.50.5147"
+    },
+    {
+      "PdfSharp.MigraDoc": "2.0.1"
+    },
+    {
+      "PdfSharp.MigraDoc.Standard": "1.51.15"
+    },
+    {
+      "PdfSharp.MigraDoc.Standard.DocumentObjectModel": "1.51.15"
+    },
+    {
+      "PDFSharp.Standard": "1.51.15"
+    },
+    {
+      "PDFSharp.Standard.Charting": "1.51.15"
+    },
+    {
+      "Polly": "7.2.3"
+    },
+    {
+      "Polly.Contrib.WaitAndRetry": "1.1.1"
+    },
+    {
+      "Polly.Extensions.Http": "3.0.0"
+    },
+    {
+      "Portable.BouncyCastle": "1.9.0"
+    },
+    {
+      "PresentationFramework": "4.6.0"
+    },
+    {
+      "protobuf-net": "2.4.4"
+    },
+    {
+      "QRCoder": "1.4.3"
+    },
+    {
+      "QuestPDF": "2022.5.0"
+    },
+    {
+      "QuickGraph": "3.6.61119.7"
+    },
+    {
+      "QuikGraph": "2.5.0"
+    },
+    {
+      "Revulytics": "5.6.2"
+    },
+    {
+      "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+    },
+    {
+      "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+    },
+    {
+      "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+    },
+    {
+      "runtime.native.System.IO.Compression": "4.3.0"
+    },
+    {
+      "runtime.native.System.Net.Http": "4.3.0"
+    },
+    {
+      "runtime.native.System.Security.Cryptography": "4.0.0"
+    },
+    {
+      "runtime.native.System.Security.Cryptography.Apple": "4.3.1"
+    },
+    {
+      "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+    },
+    {
+      "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+    },
+    {
+      "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+    },
+    {
+      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple": "4.3.1"
+    },
+    {
+      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+    },
+    {
+      "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+    },
+    {
+      "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+    },
+    {
+      "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+    },
+    {
+      "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+    },
+    {
+      "RichardSzalay.MockHttp": "6.0.0"
+    },
+    {
+      "RoslynPad.Editor.Windows": "1.2.0"
+    },
+    {
+      "RoslynPad.Roslyn": "3.6.0"
+    },
+    {
+      "RoslynPad.Roslyn.Windows": "3.6.0"
+    },
+    {
+      "RUISDK": "5.6.1"
+    },
+    {
+      "runtime.native.System.Data.SqlClient.sni": "4.7.0"
+    },
+    {
+      "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0"
+    },
+    {
+      "runtime.win-x64.runtime.native.System.Data.SqlClient.sni": "4.4.0"
+    },
+    {
+      "runtime.win-x86.runtime.native.System.Data.SqlClient.sni": "4.4.0"
+    },
+    {
+      "SerialPortStream": "2.4.0"
+    },
+    {
+      "SharpDX": "4.2.0"
+    },
+    {
+      "SharpDX.D3DCompiler": "4.2.0"
+    },
+    {
+      "SharpDX.Direct2D1": "4.2.0"
+    },
+    {
+      "SharpDX.Direct3D11": "4.2.0"
+    },
+    {
+      "SharpDX.Direct3D9": "4.2.0"
+    },
+    {
+      "SharpDX.DirectInput": "4.2.0"
+    },
+    {
+      "SharpDX.DXGI": "4.2.0"
+    },
+    {
+      "SharpDX.Mathematics": "4.2.0"
+    },
+    {
+      "SharpDX.XInput": "4.2.0"
+    },
+    {
+      "SharpSerializer": "3.0.2"
+    },
+    {
+      "SharpZipLib": "1.4.0"
+    },
+    {
+      "SimpleWifi": "2.0.0.1"
+    },
+    {
+      "Stub.System.Data.SQLite.Core.NetFramework": "1.0.116"
+    },
+    {
+      "Stub.System.Data.SQLite.Core.NetStandard": "1.0.116"
+    },
+    {
+      "SkiaSharp": "2.80.3"
+    },
+    {
+      "SQLitePCLRaw.bundle_e_sqlite3": "2.0.6"
+    },
+    {
+      "SQLitePCLRaw.core": "2.0.6"
+    },
+    {
+      "SQLitePCLRaw.lib.e_sqlite3": "2.0.6"
+    },
+    {
+      "SQLitePCLRaw.provider.e_sqlite3": "2.0.6"
+    },
+    {
+      "Svg": "3.4.3"
+    },
+    {
+      "Swashbuckle": "5.6.0"
+    },
+    {
+      "Swashbuckle.AspNetCore": "5.6.3"
+    },
+    {
+      "Swashbuckle.Core": "5.6.0"
+    },
+    {
+      "System.AppContext": "4.3.0"
+    },
+    {
+      "System.Buffers": "4.5.1"
+    },
+    {
+      "System.CodeDom": "6.0.0"
+    },
+    {
+      "System.Collections": "4.3.0"
+    },
+    {
+      "System.Collections.Concurrent": "4.3.0"
+    },
+    {
+      "System.Collections.Immutable": "6.0.0"
+    },
+    {
+      "System.Collections.Specialized": "4.3.0"
+    },
+    {
+      "System.CommandLine.Parser": "0.1.1"
+    },
+    {
+      "System.Collections.NonGeneric": "4.3.0"
+    },
+    {
+      "System.ComponentModel": "4.3.0"
+    },
+    {
+      "System.ComponentModel.Annotations": "5.0.0"
+    },
+    {
+      "System.ComponentModel.EventBasedAsync": "4.0.11"
+    },
+    {
+      "System.ComponentModel.Primitives": "4.3.0"
+    },
+    {
+      "System.ComponentModel.TypeConverter": "4.3.0"
+    },
+    {
+      "System.Composition": "6.0.0"
+    },
+    {
+      "System.Composition.AttributedModel": "6.0.0"
+    },
+    {
+      "System.Composition.Convention": "6.0.0"
+    },
+    {
+      "System.Composition.Hosting": "6.0.0"
+    },
+    {
+      "System.Composition.Runtime": "6.0.0"
+    },
+    {
+      "System.Composition.TypedParts": "6.0.0"
+    },
+    {
+      "System.Configuration.ConfigurationManager": "6.0.0"
+    },
+    {
+      "System.Data.SQLite.Core": "1.0.116"
+    },
+    {
+      "System.Console": "4.3.1"
+    },
+    {
+      "System.Data.Common": "4.3.0"
+    },
+    {
+      "System.Data.OleDb": "6.0.0"
+    },
+    {
+      "System.Data.SqlClient": "4.8.4"
+    },
+    {
+      "System.Diagnostics.Contracts": "4.3.0"
+    },
+    {
+      "System.Diagnostics.Debug": "4.3.0"
+    },
+    {
+      "System.Diagnostics.DiagnosticSource": "6.0.0"
+    },
+    {
+      "System.Diagnostics.EventLog": "6.0.0"
+    },
+    {
+      "System.Diagnostics.FileVersionInfo": "4.3.0"
+    },
+    {
+      "System.Diagnostics.PerformanceCounter": "4.7.0"
+    },
+    {
+      "System.Diagnostics.StackTrace": "4.3.0"
+    },
+    {
+      "System.Diagnostics.TextWriterTraceListener": "4.3.0"
+    },
+    {
+      "System.Diagnostics.Tools": "4.3.0"
+    },
+    {
+      "System.Diagnostics.TraceSource": "4.3.0"
+    },
+    {
+      "System.Diagnostics.Tracing": "4.3.0"
+    },
+    {
+      "System.DirectoryServices": "6.0.0"
+    },
+    {
+      "System.DirectoryServices.AccountManagement": "6.0.0"
+    },
+    {
+      "System.Drawing.Common": "6.0.0"
+    },
+    {
+      "System.Drawing.Primitives": "4.3.0"
+    },
+    {
+      "System.Dynamic.Runtime": "4.3.0"
+    },
+    {
+      "System.Globalization": "4.3.0"
+    },
+    {
+      "System.Globalization.Calendars": "4.3.0"
+    },
+    {
+      "System.Globalization.Extensions": "4.3.0"
+    },
+    {
+      "System.IdentityModel.Tokens.Jwt": "6.25.0"
+    },
+    {
+      "System.IO": "4.3.0"
+    },
+    {
+      "System.IO.Compression": "4.3.0"
+    },
+    {
+      "System.IO.Compression.ZipFile": "4.3.0"
+    },
+    {
+      "System.IO.FileSystem": "4.3.0"
+    },
+    {
+      "System.IO.FileSystem.AccessControl": "5.0.0"
+    },
+    {
+      "System.IO.FileSystem.Primitives": "4.3.0"
+    },
+    {
+      "System.IO.Hashing": "6.0.2"
+    },
+    {
+      "System.IO.MemoryMappedFiles": "4.3.0"
+    },
+    {
+      "System.IO.Packaging": "6.0.0"
+    },
+    {
+      "System.IO.Ports": "6.0.0"
+    },
+    {
+      "System.Linq": "4.3.0"
+    },
+    {
+      "System.Linq.Dynamic": "1.0.7"
+    },
+    {
+      "System.Linq.Dynamic.Core": "1.2.20"
+    },
+    {
+      "System.Linq.Expressions": "4.3.0"
+    },
+    {
+      "System.Linq.Queryable": "4.0.1"
+    },
+    {
+      "System.Management": "6.0.0"
+    },
+    {
+      "System.Management.Automation.dll": "10.0.10586"
+    },
+    {
+      "System.Memory": "4.5.5"
+    },
+    {
+      "System.Memory.Data": "6.0.0"
+    },
+    {
+      "System.Net.Http": "4.3.4"
+    },
+    {
+      "System.Net.Primitives": "4.3.1"
+    },
+    {
+      "System.Net.Requests": "4.0.11"
+    },
+    {
+      "System.Net.Sockets": "4.3.0"
+    },
+    {
+      "System.Net.WebHeaderCollection": "4.0.1"
+    },
+    {
+      "System.Numerics.Vectors": "4.5.0"
+    },
+    {
+      "System.ObjectModel": "4.3.0"
+    },
+    {
+      "System.Private.DataContractSerialization": "4.3.0"
+    },
+    {
+      "System.Reactive": "5.0.0"
+    },
+    {
+      "System.Reactive.Core": "5.0.0"
+    },
+    {
+      "System.Reactive.Interfaces": "5.0.0"
+    },
+    {
+      "System.Reactive.Linq": "5.0.0"
+    },
+    {
+      "System.Reactive.PlatformServices": "5.0.0"
+    },
+    {
+      "System.Reactive.Windows.Threading": "5.0.0"
+    },
+    {
+      "System.Reflection": "4.3.0"
+    },
+    {
+      "System.Reflection.Emit": "4.7.0"
+    },
+    {
+      "System.Reflection.Emit.ILGeneration": "4.7.0"
+    },
+    {
+      "System.Reflection.Emit.Lightweight": "4.7.0"
+    },
+    {
+      "System.Reflection.Extensions": "4.3.0"
+    },
+    {
+      "System.Reflection.Metadata": "6.0.0"
+    },
+    {
+      "System.Reflection.Primitives": "4.3.0"
+    },
+    {
+      "System.Reflection.TypeExtensions": "4.7.0"
+    },
+    {
+      "System.Resources.Extensions": "4.6.0"
+    },
+    {
+      "System.Resources.ResourceManager": "4.3.0"
+    },
+    {
+      "System.Runtime": "4.3.1"
+    },
+    {
+      "System.Runtime.Caching": "6.0.0"
+    },
+    {
+      "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+    },
+    {
+      "System.Runtime.Extensions": "4.3.1"
+    },
+    {
+      "System.Runtime.Handles": "4.3.0"
+    },
+    {
+      "System.Runtime.InteropServices": "4.3.0"
+    },
+    {
+      "System.Runtime.InteropServices.RuntimeInformation": "4.3.0"
+    },
+    {
+      "System.Runtime.InteropServices.WindowsRuntime": "4.3.0"
+    },
+    {
+      "System.Runtime.Numerics": "4.3.0"
+    },
+    {
+      "System.Runtime.Serialization.Primitives": "4.3.0"
+    },
+    {
+      "System.Runtime.Serialization.Xml": "4.3.0"
+    },
+    {
+      "System.Runtime.WindowsRuntime": "4.7.0"
+    },
+    {
+      "System.Runtime.WindowsRuntime.UI.Xaml": "4.7.0"
+    },
+    {
+      "System.Security.AccessControl": "6.0.0"
+    },
+    {
+      "System.Security.Claims": "4.3.0"
+    },
+    {
+      "System.Security.Cryptography.Algorithms": "4.3.1"
+    },
+    {
+      "System.Security.Cryptography.Cng": "4.5.0"
+    },
+    {
+      "System.Security.Cryptography.Csp": "4.3.0"
+    },
+    {
+      "System.Security.Cryptography.Encoding": "4.3.0"
+    },
+    {
+      "System.Security.Cryptography.OpenSsl": "4.3.0"
+    },
+    {
+      "System.Security.Cryptography.Primitives": "4.3.0"
+    },
+    {
+      "System.Security.Cryptography.ProtectedData": "6.0.0"
+    },
+    {
+      "System.Security.Cryptography.X509Certificates": "4.3.2"
+    },
+    {
+      "System.Security.Permissions": "6.0.0"
+    },
+    {
+      "System.Security.Principal": "4.3.0"
+    },
+    {
+      "System.Security.Principal.Windows": "5.0.0"
+    },
+    {
+      "System.Spatial": "5.8.5"
+    },
+    {
+      "System.Text.Encoding": "4.3.0"
+    },
+    {
+      "System.Text.Encoding.CodePages": "6.0.0"
+    },
+    {
+      "System.Text.Encoding.Extensions": "4.3.0"
+    },
+    {
+      "System.Text.Encodings.Web": "6.0.0"
+    },
+    {
+      "System.Text.RegularExpressions": "4.3.1"
+    },
+    {
+      "System.Text.Json": "6.0.6"
+    },
+    {
+      "System.Threading": "4.3.0"
+    },
+    {
+      "System.Threading.Tasks": "4.3.0"
+    },
+    {
+      "System.Threading.Tasks.Extensions": "4.5.4"
+    },
+    {
+      "System.Threading.Tasks.Parallel": "4.3.0"
+    },
+    {
+      "System.Threading.Thread": "4.3.0"
+    },
+    {
+      "System.Threading.Timer": "4.3.0"
+    },
+    {
+      "System.IO.UnmanagedMemoryStream": "4.3.0"
+    },
+    {
+      "System.ValueTuple": "4.5.0"
+    },
+    {
+      "System.Windows.Interactivity.WPF": "2.0.20525"
+    },
+    {
+      "System.Windows.Extensions": "6.0.0"
+    },
+    {
+      "System.Xml.ReaderWriter": "4.3.1"
+    },
+    {
+      "System.Xml.XDocument": "4.3.0"
+    },
+    {
+      "System.Xml.XmlDocument": "4.3.0"
+    },
+    {
+      "System.Xml.XmlSerializer": "4.3.0"
+    },
+    {
+      "System.Xml.XPath": "4.3.0"
+    },
+    {
+      "System.Xml.XPath.XDocument": "4.3.0"
+    },
+    {
+      "Telerik.Windows.Controls.DataServices.for.Wpf": "2021.1.325"
+    },
+    {
+      "Telerik.Windows.Controls.DataVisualization.for.Wpf": "2021.1.325"
+    },
+    {
+      "Telerik.Windows.Controls.Diagrams.Extensions.for.Wpf": "2021.1.325"
+    },
+    {
+      "Telerik.Windows.Controls.Diagrams.Ribbon.for.Wpf": "2021.1.325"
+    },
+    {
+      "Telerik.Windows.Controls.Docking.for.Wpf": "2021.1.325"
+    },
+    {
+      "Telerik.Windows.Controls.Expressions.for.Wpf": "2021.1.325"
+    },
+    {
+      "Telerik.Windows.Controls.FixedDocumentViewersUI.for.Wpf": "2021.1.325"
+    },
+    {
+      "Telerik.Windows.Controls.RibbonView.for.Wpf": "2021.1.325"
+    },
+    {
+      "Telerik.Windows.Documents.for.Wpf": "2021.1.325"
+    },
+    {
+      "Telerik.UI.for.Wpf.NetCore": "2021.2.615"
+    },
+    {
+      "TestStack.White.Uia3": "0.14.0-uiacomwrapper0214"
+    },
+    {
+      "TransientFaultHandling.Core": "5.1.1209.1"
+    },
+    {
+      "UIAComWrapper": "1.1.0.14"
+    },
+    {
+      "WebActivatorEx": "2.0.0"
+    },
+    {
+      "WPFTextBoxAutoComplete": "1.0.5"
+    },
+    {
+      "xunit": "2.4.2"
+    }
+  ]
+}
