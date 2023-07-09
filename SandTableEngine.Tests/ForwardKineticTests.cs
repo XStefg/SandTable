@@ -3,7 +3,7 @@ using FluentAssertions;
 namespace SandTableEngine.Test;
 
 [TestClass]
-public class ForwardKineticsTests
+public class ForwardKineticTests
 {
   [TestMethod]
   [DynamicData( nameof(AdditionData) )]
@@ -13,11 +13,11 @@ public class ForwardKineticsTests
     KineticParameters parameters = CreateParameters();
 
     // Act
-    ForwardKinetics kinetics = ForwardKinetics.ComputeFor( parameters, angle1, angle2 );
+    ForwardKinetic kinetic = ForwardKinetic.ComputeFor( parameters, angle1, angle2 );
 
     // Aert
-    kinetics.Y.Value.Should().BeApproximately( yPosition, 0.001 );
-    kinetics.X.Value.Should().BeApproximately( xPosition, 0.001 );
+    kinetic.Y.Value.Should().BeApproximately( yPosition, 0.001 );
+    kinetic.X.Value.Should().BeApproximately( xPosition, 0.001 );
   }
 
   public static IEnumerable<object[]> AdditionData =>

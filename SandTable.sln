@@ -23,6 +23,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImportCore", "ImportCore\ImportCore.csproj", "{D4D405A1-7FB0-47F5-8449-B9B8C80AB17D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandTableEngine.Tests", "SandTableEngine.Tests\SandTableEngine.Tests.csproj", "{8DE3E83C-BF94-42BB-9A71-7276A2EDDF91}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D4D405A1-7FB0-47F5-8449-B9B8C80AB17D} = {D4D405A1-7FB0-47F5-8449-B9B8C80AB17D}
+		{FF765C1C-A298-4827-BF24-12494A094933} = {FF765C1C-A298-4827-BF24-12494A094933}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
