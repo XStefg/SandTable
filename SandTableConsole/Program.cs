@@ -1,4 +1,6 @@
-﻿namespace SandTableConsole
+﻿using System;
+
+namespace SandTableConsole
 {
   internal class Program
   {

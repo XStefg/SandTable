@@ -1,17 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.Build.NoTargets/3.7.0">
 
   <PropertyGroup>
-    <TargetFramework>net7.0-windows</TargetFramework>
-    <UseWPF>true</UseWPF>
-    <UseWindowsForms>true</UseWindowsForms>
-    <Nullable>disable</Nullable>
-    <unsafe>true</unsafe>
-    <ImplicitUsings>disable</ImplicitUsings>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <CoreRootDir>$(MSBuildThisFileDirectory)\..</CoreRootDir>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <TargetFrameworks>net7.0;net7.0-windows</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,10 +19,10 @@
   <Target Name="CopyFiles" 
           BeforeTargets="Build" 
           Inputs="@(ConfigurationFiles)" 
-          Outputs="@(ConfigurationFiles->'$(CoreRootDir)%(Filename)%(Extension)')">
+          Outputs="@(ConfigurationFiles->'$(CoreRepositoryDir)%(Filename)%(Extension)')">
     <Message Text="Copying configuration files..." Importance="high" />
-    <Copy SourceFiles="@(ConfigurationFiles)" DestinationFolder="$(CoreRootDir)" SkipUnchangedFiles="true" ContinueOnError="true" />
-    <Error Text="The Eddyfi Core must be cloned and compiled at $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)')). The following bat file can be executed to fetch the Eddyfi Core: $([System.IO.Path]::GetFullPath('$(CoreRootDir)FetchEddyfiCore.bat'))" Condition="'$(MSBuildLastTaskResult)' == 'False'" />
+    <Copy SourceFiles="@(ConfigurationFiles)" DestinationFolder="$(CoreRepositoryDir)" SkipUnchangedFiles="true" ContinueOnError="true" />
+    <Error Text="The Eddyfi Core must be cloned and compiled at $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)')). The following bat file can be executed to fetch the Eddyfi Core: $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)FetchEddyfiCore.bat'))" Condition="'$(MSBuildLastTaskResult)' == 'False'" />
   </Target>
 
   <ItemGroup>
@@ -48,6 +38,6 @@
           DestinationFolder="$(MSBuildThisFileDirectory)\..\$(ConfigurationName)\$(TargetFramework)\%(RecursiveDir)" 
           SkipUnchangedFiles="true" 
           ContinueOnError="true" />
-    <Error Text="The Eddyfi Core must be cloned and compiled at $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)')). The following bat file can be executed to fetch the Eddyfi Core: $([System.IO.Path]::GetFullPath('$(CoreRootDir)FetchEddyfiCore.bat'))" Condition="'$(MSBuildLastTaskResult)' == 'False'" />
+    <Error Text="The Eddyfi Core must be cloned and compiled at $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)')). The following bat file can be executed to fetch the Eddyfi Core: $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)FetchEddyfiCore.bat'))" Condition="'$(MSBuildLastTaskResult)' == 'False'" />
   </Target>
 </Project>

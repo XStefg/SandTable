@@ -1,8 +1,8 @@
 ﻿namespace SandTableEngine;
 
-public class KineticParameters
+public class KinematicParameters
 {
-  public KineticParameters( Distance distance1, Distance distance2 )
+  public KinematicParameters( Distance distance1, Distance distance2 )
   {
     Distance1 = distance1;
     Distance2 = distance2;
