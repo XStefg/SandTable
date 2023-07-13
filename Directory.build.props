@@ -6,5 +6,7 @@
     <Nullable>enable</Nullable>
 
     <CoreRepositoryDir>$(MSBuildThisFileDirectory)..\Core\</CoreRepositoryDir>
+    <SandTableRepositoryDir>$(MSBuildThisFileDirectory)</SandTableRepositoryDir>
+
   </PropertyGroup>
 </Project>

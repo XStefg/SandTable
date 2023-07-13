@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ConfigurationFiles Include="$(CoreRepositoryDir)Settings.XamlStyler" />
-    <ConfigurationFiles Include="$(CoreRepositoryDir)nugetPackageConfig.json" />
+    <ConfigurationFiles Include="$(CoreRepositoryDir).editorconfig" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,9 +19,11 @@
   <Target Name="CopyFiles" 
           BeforeTargets="Build" 
           Inputs="@(ConfigurationFiles)" 
-          Outputs="@(ConfigurationFiles->'$(CoreRepositoryDir)%(Filename)%(Extension)')">
+          Outputs="@(ConfigurationFiles->'$(SandTableRepositoryDir)%(Filename)%(Extension)')">
     <Message Text="Copying configuration files..." Importance="high" />
-    <Copy SourceFiles="@(ConfigurationFiles)" DestinationFolder="$(CoreRepositoryDir)" SkipUnchangedFiles="true" ContinueOnError="true" />
+    <Copy SourceFiles="@(ConfigurationFiles)" 
+          DestinationFolder="$(SandTableRepositoryDir)" 
+          SkipUnchangedFiles="true" ContinueOnError="true" />
     <Error Text="The Eddyfi Core must be cloned and compiled at $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)')). The following bat file can be executed to fetch the Eddyfi Core: $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)FetchEddyfiCore.bat'))" Condition="'$(MSBuildLastTaskResult)' == 'False'" />
   </Target>
 

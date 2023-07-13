@@ -449,3 +449,5 @@ FodyWeavers.xsd
 EddyfiAuthentication.cs
 
 JSON/
+.editorconfig
+Settings.XamlStyler
