@@ -6,8 +6,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SandTableEngine">
+      <HintPath>$(TargetDir)SandTableEngine.dll</HintPath>
+    </Reference>
     <Reference Include="Eddyfi.Core.Utilities">
       <HintPath>$(TargetDir)Eddyfi.Core.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="EddyfiStyles">
+      <HintPath>$(TargetDir)EddyfiStyles.dll</HintPath>
     </Reference>
     <Reference Include="CommonUIControls.Wpf">
       <HintPath>$(TargetDir)CommonUIControls.Wpf.dll</HintPath>

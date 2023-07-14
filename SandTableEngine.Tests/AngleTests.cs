@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SandTableEngine.Tests;
@@ -50,6 +45,10 @@ public class AngleTests
     angle.Value.Should().Be(expectedAngle);  
   }
   public static IEnumerable<object[]> AdditionData =>
-    new[] { new object[] { Angle.CreateFromDegree( 10.0 ), Math.PI * 10.0 / 180.0 } };
+    new[]
+    {
+      new object[] { Angle.CreateFromDegree( 10.0 ), Math.PI * 10.0 / 180.0 },
+      new object[] { Angle.CreateFromDegree( 20.0 ), Math.PI * 20.0 / 180.0 },
+    };
 
 }

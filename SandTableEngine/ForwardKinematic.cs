@@ -1,25 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SandTableEngine;
 
+[DebuggerDisplay( "{CartesianCoordinates}" )]  
 public class ForwardKinematic
 {
-  private ForwardKinematic( Distance x1, Distance y1, Distance x2, Distance y2 )
-  {
-    X1 = x1;
-    Y1 = y1;
-    X2 = x2;
-    Y2 = y2;
-  }
-
-  public Distance X1 { get; }
-  public Distance Y1 { get; }
-  public Distance X2 { get; }
-  public Distance Y2 { get; }
+  public required Distance X1 { get; init; }
+  public required Distance Y1 { get; init;}
+  public required Distance X2 { get; init;}
+  public required Distance Y2 { get; init;}
 
   public static ForwardKinematic ComputeFor( KinematicParameters param, Angle rotation1, Angle rotation2 )
   {
@@ -27,6 +21,8 @@ public class ForwardKinematic
     Distance y1 = param.Distance1 * Math.Sin( rotation1 );
     Distance x2 = x1 + param.Distance2 * Math.Cos( rotation1 + rotation2 );
     Distance y2 = y1 + param.Distance2 * Math.Sin( rotation1 + rotation2 );
-    return new ForwardKinematic( x1, y1, x2, y2 );
+    return new() { X1 = x1, Y1 = y1, X2 = x2, Y2 = y2 };
   }
+
+  public string CartesianCoordinates => @$"X1: {X1}, Y1: {Y1}, X2: {X2}, Y2: {Y2}";
 }

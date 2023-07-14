@@ -35,8 +35,14 @@ public class ForwardKinematicTests
       Create( -90.0,   0.0,  0.0, -2.0,  0.0, -3.0 ),
     };
 
-  KinematicParameters CreateParameters() => new( 2.0, 1.0 );
+  KinematicParameters CreateParameters() => new() { Distance1 = 2.0, Distance2 = 1.0 };
 
   private static object[] Create( double angle1, double angle2, Distance x1Position, Distance y1Position, Distance x2Position, Distance y2Position )
-    => new object[] { Angle.CreateFromDegree( angle1 ), Angle.CreateFromDegree( angle2 ), x1Position, y1Position, x2Position, y2Position };
+    => new object[] 
+       { Angle.CreateFromDegree( angle1 ), 
+         Angle.CreateFromDegree( angle2 ), 
+         x1Position, 
+         y1Position, 
+         x2Position, 
+         y2Position };
 }

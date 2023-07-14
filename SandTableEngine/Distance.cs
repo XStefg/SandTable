@@ -35,6 +35,8 @@ public struct Distance
 
   public static Distance CreateFromMilimeter( double valueInMilimeter ) => new(valueInMilimeter / 1000);
 
+  public override string ToString() => $"{Value:f3}m";
+
   #endregion
 
   #region Operators

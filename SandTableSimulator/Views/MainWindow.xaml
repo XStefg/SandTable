@@ -1,0 +1,136 @@
+﻿<Window x:Class="SandTableSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:SandTableSimulator"
+        xmlns:eddyfi="http://schemas.eddyfi.com/wpf"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:SandTableSimulator.ViewModels"
+        xmlns:wpf="clr-namespace:SandTableSimulator.Wpf"
+        Title="MainWindow"
+        Width="800"
+        Height="650"
+        mc:Ignorable="d">
+
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <eddyfi:DefaultStylesWithMargins />
+      </ResourceDictionary.MergedDictionaries>
+      <Style TargetType="Button" BasedOn="{StaticResource EddyfiButtonStyle}">
+        <Setter Property="MinWidth" Value="80" />
+      </Style>
+      <Style TargetType="Label" BasedOn="{StaticResource EddyfiLabelStyle}">
+        <Setter Property="VerticalAlignment" Value="Center" />
+      </Style>
+      <Style TargetType="TextBox">
+        <Setter Property="MinWidth" Value="80" />
+      </Style>
+      <wpf:AngleToStringConverter x:Key="AngleToStringConverter" />
+      <wpf:AngleToDegreeDoubleConverter x:Key="AngleToDegreeDoubleConverter" />
+    </ResourceDictionary>
+  </Window.Resources>
+
+  <Window.DataContext>
+    <viewModels:MainWindowViewModel />
+  </Window.DataContext>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Canvas Grid.Row="0"
+            Background="White"
+            Width="Auto"
+            Height="Auto"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            RenderTransformOrigin="0.5,0.5">
+      <Canvas.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleY="-100" ScaleX="100" />
+        </TransformGroup>
+      </Canvas.RenderTransform>
+      <Line X1="-2.0"
+            Y1="0"
+            X2="2.0"
+            Y2="0.0"
+            Stroke="Gray"
+            StrokeThickness=".01" />
+      <Line X1="0"
+            Y1="-2.0"
+            X2="0"
+            Y2="2.0"
+            Stroke="Gray"
+            StrokeThickness=".01" />
+      <Line X1="0"
+            Y1="0"
+            X2="{Binding ForwardKinematic.X1.Value}"
+            Y2="{Binding ForwardKinematic.Y1.Value}"
+            Stroke="Black"
+            StrokeThickness="0.01" />
+      <Line X1="{Binding ForwardKinematic.X1.Value}"
+            Y1="{Binding ForwardKinematic.Y1.Value}"
+            X2="{Binding ForwardKinematic.X2.Value}"
+            Y2="{Binding ForwardKinematic.Y2.Value}"
+            Stroke="Black"
+            StrokeThickness="0.01" />
+    </Canvas>
+    <TextBlock Grid.Row="0"
+               Text="{Binding ForwardKinematic.CartesianCoordinates}"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Right" />
+    <GroupBox Grid.Row="1" Header="Control">
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <GroupBox Header="Arm input">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Content="Angle1"
+                   Target="{Binding ElementName=angle1TestBox}" />
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+              <TextBox x:Name="angle1TestBox"
+                       eddyfi:TextInputBehaviors.InputMode="Double"
+                       eddyfi:TextInputBehaviors.SelectAllOnEnter="True"
+                       Text="{Binding Angle1, Mode=TwoWay, Converter={StaticResource AngleToStringConverter}}" />
+              <Label Content="degree" />
+              <Slider Minimum="-180.0" Maximum="180" Orientation="Horizontal" Width="200" Value="{Binding Angle1, Mode=TwoWay, Converter={StaticResource AngleToDegreeDoubleConverter}}"/>
+            </StackPanel>
+
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Content="Angle2"
+                   Target="{Binding ElementName=angle2TestBox}" />
+            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+              <TextBox x:Name="angle2TestBox"
+                       eddyfi:TextInputBehaviors.InputMode="Double"
+                       eddyfi:TextInputBehaviors.SelectAllOnEnter="True"
+                       Text="{Binding Angle2, Mode=TwoWay, Converter={StaticResource AngleToStringConverter}}" />
+              <Label Content="degree" />
+              <Slider Minimum="-180.0" Maximum="180" Orientation="Horizontal" Width="200" Value="{Binding Angle2, Mode=TwoWay, Converter={StaticResource AngleToDegreeDoubleConverter}}"/>
+            </StackPanel>
+
+          </Grid>
+        </GroupBox>
+        <Button Grid.Row="1"
+                x:Name="button"
+                HorizontalAlignment="Left"
+                Content="Start" />
+      </Grid>
+    </GroupBox>
+  </Grid>
+</Window>
