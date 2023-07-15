@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using Eddyfi.Core;
-using SandTableEngine;
+using SandTableEngine.Units;
 
 namespace SandTableSimulator.Wpf
 {

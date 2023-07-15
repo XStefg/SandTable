@@ -1,5 +1,7 @@
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SandTableEngine.Kinematic;
+using SandTableEngine.Units;
 
 namespace SandTableEngine.Test;
 

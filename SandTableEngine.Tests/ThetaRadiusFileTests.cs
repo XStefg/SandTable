@@ -4,11 +4,13 @@ using System.Linq;
 using Eddyfi.Core.Test.Utilities;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SandTableEngine.File;
+using SandTableEngine.Units;
 
 namespace SandTableEngine.Tests
 {
   [TestClass]
-  public class ThetaRFileTests
+  public class ThetaRadiusFileTests
   {
     #region Initialization and Cleanup
 
@@ -33,7 +35,7 @@ namespace SandTableEngine.Tests
       string file = m_Context.GetPathFor( "Hepreverse.thr" );
 
       // Act
-      ThetaRFile result = ThetaRFile.CreateFromFile( file );
+      ThetaRadiusFile result = ThetaRadiusFile.CreateFromFile( file );
 
       // Assert
       result.Should().NotBeNull();
@@ -46,7 +48,7 @@ namespace SandTableEngine.Tests
 
     #endregion
 
-    TestFileDirectoryContext m_Context = new TestFileDirectoryContext( typeof( ThetaRFileTests ) );
+    TestFileDirectoryContext m_Context = new TestFileDirectoryContext( typeof( ThetaRadiusFileTests ) );
 
   }
 }

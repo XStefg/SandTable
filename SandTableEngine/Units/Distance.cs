@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SandTableEngine;
+namespace SandTableEngine.Units;
 
-[DebuggerDisplay("{Value}m")]
+[DebuggerDisplay( "{Value}m" )]
 public struct Distance
 {
   #region CTOR
@@ -16,7 +16,7 @@ public struct Distance
   /// CTOR
   /// </summary>
   /// <param name="value">value in rad</param>
-  private Distance(double value)
+  private Distance( double value )
   {
     Value = value;
   }
@@ -31,9 +31,9 @@ public struct Distance
 
   #region public Methods
 
-  public static Distance CreateFromMeter(double value) => new(value);
+  public static Distance CreateFromMeter( double value ) => new( value );
 
-  public static Distance CreateFromMilimeter( double valueInMilimeter ) => new(valueInMilimeter / 1000);
+  public static Distance CreateFromMilimeter( double valueInMilimeter ) => new( valueInMilimeter / 1000 );
 
   public override string ToString() => $"{Value:f3}m";
 
@@ -41,9 +41,9 @@ public struct Distance
 
   #region Operators
 
-  public static implicit operator Distance(double value) => new(value);
+  public static implicit operator Distance( double value ) => new( value );
 
-  public static implicit operator double(Distance distance) => distance.Value;
+  public static implicit operator double( Distance distance ) => distance.Value;
 
   #endregion
 }

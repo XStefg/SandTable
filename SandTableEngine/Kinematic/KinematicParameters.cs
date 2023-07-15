@@ -1,4 +1,6 @@
-﻿namespace SandTableEngine;
+﻿using SandTableEngine.Units;
+
+namespace SandTableEngine.Kinematic;
 
 public class KinematicParameters
 {

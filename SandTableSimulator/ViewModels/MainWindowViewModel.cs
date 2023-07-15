@@ -1,6 +1,7 @@
 ﻿using System;
 using Eddyfi.Core;
-using SandTableEngine;
+using SandTableEngine.Kinematic;
+using SandTableEngine.Units;
 
 namespace SandTableSimulator.ViewModels
 {

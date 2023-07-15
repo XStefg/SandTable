@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SandTableEngine
+namespace SandTableEngine.File
 {
-  public class ThetaRFile
+  public class ThetaRadiusFile
   {
-    public static ThetaRFile CreateFromString( IEnumerable<string> lines )
+    public static ThetaRadiusFile CreateFromString( IEnumerable<string> lines )
     {
-      List<ThetaRPoint> points = new List<ThetaRPoint>();
+      List<ThetaRadiusPoint> points = new List<ThetaRadiusPoint>();
 
       foreach ( string line in lines )
       {
@@ -20,19 +20,19 @@ namespace SandTableEngine
         {
           if ( double.TryParse( parts[0], out double theta ) && double.TryParse( parts[1], out double r ) )
           {
-            points.Add( new ThetaRPoint { Angle = theta, Radius = r } );
+            points.Add( new ThetaRadiusPoint { Angle = theta, Radius = r } );
           }
         }
       }
 
-      return new ThetaRFile { Points = points.ToImmutableList() };
+      return new ThetaRadiusFile { Points = points.ToImmutableList() };
     }
 
-    public static ThetaRFile CreateFromFile( string filename )
+    public static ThetaRadiusFile CreateFromFile( string filename )
     {
       return CreateFromString( System.IO.File.ReadAllLines( filename ) );
     }
 
-    public ImmutableList<ThetaRPoint> Points { get; init; } = ImmutableList<ThetaRPoint>.Empty;
+    public ImmutableList<ThetaRadiusPoint> Points { get; init; } = ImmutableList<ThetaRadiusPoint>.Empty;
   }
 }

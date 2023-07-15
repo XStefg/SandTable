@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace SandTableEngine;
+namespace SandTableEngine.Units;
 
-[DebuggerDisplay("{ValueInDegree}°")]
+[DebuggerDisplay( "{ValueInDegree}°" )]
 public struct Angle
 {
   #region CTOR
@@ -12,7 +12,7 @@ public struct Angle
   /// CTOR
   /// </summary>
   /// <param name="value">value in rad</param>
-  private Angle(double value)
+  private Angle( double value )
   {
     Value = value;
   }
@@ -29,16 +29,16 @@ public struct Angle
 
   #region public Methods
 
-  public static Angle CreateFromDegree(double value) => new(value * Math.PI / 180);
+  public static Angle CreateFromDegree( double value ) => new( value * Math.PI / 180 );
 
-  public static Angle CreateFromRad(double value) => new(value);
+  public static Angle CreateFromRad( double value ) => new( value );
 
   #endregion
 
   #region Operators
 
-  public static implicit operator Angle(double value) => new(value);
-  public static implicit operator double(Angle angle) => angle.Value;
+  public static implicit operator Angle( double value ) => new( value );
+  public static implicit operator double( Angle angle ) => angle.Value;
 
   #endregion
 }

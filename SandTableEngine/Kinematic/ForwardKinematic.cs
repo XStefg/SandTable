@@ -4,16 +4,17 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SandTableEngine.Units;
 
-namespace SandTableEngine;
+namespace SandTableEngine.Kinematic;
 
-[DebuggerDisplay( "{CartesianCoordinates}" )]  
+[DebuggerDisplay( "{CartesianCoordinates}" )]
 public class ForwardKinematic
 {
   public required Distance X1 { get; init; }
-  public required Distance Y1 { get; init;}
-  public required Distance X2 { get; init;}
-  public required Distance Y2 { get; init;}
+  public required Distance Y1 { get; init; }
+  public required Distance X2 { get; init; }
+  public required Distance Y2 { get; init; }
 
   public static ForwardKinematic ComputeFor( KinematicParameters param, Angle rotation1, Angle rotation2 )
   {
