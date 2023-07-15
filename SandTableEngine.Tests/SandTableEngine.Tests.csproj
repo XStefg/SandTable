@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net7.0-windows</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="TestFiles\**" CopyToOutputDirectory="Always" Link="TestFiles\$(ProjectName)\%(RecursiveDir)%(Filename)%(Extension)"></None>
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="SandTableEngine.dll">
       <HintPath>$(TargetDir)SandTableEngine.dll</HintPath>
     </Reference>
@@ -26,6 +30,9 @@
   <ItemGroup>
     <Reference Include="Eddyfi.Core.Utilities">
       <HintPath>$(TargetDir)Eddyfi.Core.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Eddyfi.Core.Test.Utilities">
+      <HintPath>$(TargetDir)Eddyfi.Core.Test.Utilities.dll</HintPath>
     </Reference>
   </ItemGroup>
 
