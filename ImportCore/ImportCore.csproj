@@ -16,30 +16,37 @@
     <PackageReference Include="System.Management" />
   </ItemGroup>
 
-  <Target Name="CopyFiles" 
-          BeforeTargets="Build" 
-          Inputs="@(ConfigurationFiles)" 
+  <Target Name="CopyFiles"
+          BeforeTargets="Build"
+          Inputs="@(ConfigurationFiles)"
           Outputs="@(ConfigurationFiles->'$(SandTableRepositoryDir)%(Filename)%(Extension)')">
     <Message Text="Copying configuration files..." Importance="high" />
-    <Copy SourceFiles="@(ConfigurationFiles)" 
-          DestinationFolder="$(SandTableRepositoryDir)" 
+    <Copy SourceFiles="@(ConfigurationFiles)"
+          DestinationFolder="$(SandTableRepositoryDir)"
           SkipUnchangedFiles="true" ContinueOnError="true" />
-    <Error Text="The Eddyfi Core must be cloned and compiled at $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)')). The following bat file can be executed to fetch the Eddyfi Core: $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)FetchEddyfiCore.bat'))" Condition="'$(MSBuildLastTaskResult)' == 'False'" />
+    <Error
+      Text="The Eddyfi Core must be cloned and compiled at $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)')). The following bat file can be executed to fetch the Eddyfi Core: $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)FetchEddyfiCore.bat'))"
+      Condition="'$(MSBuildLastTaskResult)' == 'False'" />
   </Target>
 
   <ItemGroup>
     <EddyfiCoreDlls Include="$(CoreRepositoryDir)\$(ConfigurationName)\net6.0-windows\**\*.*" />
   </ItemGroup>
 
-  <Target Name="CopyEddyfiCoreDlls" 
-          BeforeTargets="Build" 
-          Inputs="@(EddyfiCoreDlls)" 
-          Outputs="@(EddyfiCoreDlls->'$(MSBuildThisFileDirectory)\..\$(ConfigurationName)\$(TargetFramework)\%(RecursiveDir)%(Filename)%(Extension)')">
+  <Target Condition=" '$(TargetFramework)' == 'net7.0-windows'"
+          Name="CopyEddyfiCoreDlls"
+          BeforeTargets=" Build"
+          Inputs="@(
+          EddyfiCoreDlls)"
+          Outputs="@( EddyfiCoreDlls->
+    '$(MSBuildThisFileDirectory)\..\$(ConfigurationName)\$(TargetFramework)\%(RecursiveDir)%(Filename)%(Extension)')">
     <Message Text="Copying Eddyfi Core Dll's..." Importance="high" />
     <Copy SourceFiles="@(EddyfiCoreDlls)"
-          DestinationFolder="$(MSBuildThisFileDirectory)\..\$(ConfigurationName)\$(TargetFramework)\%(RecursiveDir)" 
-          SkipUnchangedFiles="true" 
+          DestinationFolder="$(MSBuildThisFileDirectory)\..\$(ConfigurationName)\$(TargetFramework)\%(RecursiveDir)"
+          SkipUnchangedFiles="true"
           ContinueOnError="true" />
-    <Error Text="The Eddyfi Core must be cloned and compiled at $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)')). The following bat file can be executed to fetch the Eddyfi Core: $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)FetchEddyfiCore.bat'))" Condition="'$(MSBuildLastTaskResult)' == 'False'" />
+    <Error
+      Text="The Eddyfi Core must be cloned and compiled at $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)')). The following bat file can be executed to fetch the Eddyfi Core: $([System.IO.Path]::GetFullPath('$(CoreRepositoryDir)FetchEddyfiCore.bat'))"
+      Condition="'$(MSBuildLastTaskResult)' == 'False'" />
   </Target>
 </Project>

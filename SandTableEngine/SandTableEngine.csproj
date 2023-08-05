@@ -2,11 +2,8 @@
   <PropertyGroup>
     <TargetFrameworks>net7.0;net7.0-windows</TargetFrameworks>
   </PropertyGroup>
-
   <ItemGroup>
-    <Reference Include="Eddyfi.Core.Utilities">
-      <HintPath>$(TargetDir)Eddyfi.Core.Utilities.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options" />
   </ItemGroup>
-
 </Project>

@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SandTableEngine.File;
 using SandTableEngine.Processor;
+using SandTableEngine.Processor.ThetaRadius;
 using SandTableEngine.Units;
 
 namespace SandTableEngine.Tests
@@ -17,13 +15,11 @@ namespace SandTableEngine.Tests
     [TestInitialize]
     public void Initialize()
     {
-      // This method is executed before each individual test method.
     }
 
     [TestCleanup]
     public void Cleanup()
     {
-      // This method is executed after each individual test method.
     }
 
     #endregion
@@ -42,7 +38,7 @@ namespace SandTableEngine.Tests
 
       ProcessingBuffer<ThetaRadiusPoint> inputBuffer = new() { Buffer = points };
 
-      ThetaRadiusSequencerConfig config = new ThetaRadiusSequencerConfig() { MinimumDistance = .005 };
+      ThetaRadiusSequencerConfig config = new ThetaRadiusSequencerConfig() { MinimumDistance = .050 };
 
       ThetaRadiusSequencer sequencer = new( config );
 
@@ -51,16 +47,16 @@ namespace SandTableEngine.Tests
       ProcessingBuffer<ThetaRadiusPoint> outputBuffer = sequencer.GetOutput();
 
       // Assert
-      outputBuffer.Buffer.Length.Should().Be( 201 );
+      outputBuffer.Buffer.Length.Should().Be( 92 );
       outputBuffer.Buffer[0].Should().Be( points[0] );
       outputBuffer.Buffer.Last().Should().Be( points.Last() );
 
-      ThetaRadiusPoint[] deltaPoints = outputBuffer.Buffer
-        .Zip( outputBuffer.Buffer.Skip( 1 ), ( a, b ) => new ThetaRadiusPoint() { Radius = b.Radius - a.Radius, Angle = b.Angle - a.Angle } )
-        .ToArray();
+      Distance[] deltaPoints = outputBuffer.Buffer
+                                           .Zip( outputBuffer.Buffer.Skip( 1 ),
+                                                 ( a, b ) => ThetaRadiusSequenceCalculator.GetDistanceBetweenPoints( a, b ) )
+                                           .ToArray();
 
-      deltaPoints.All( p => p.Radius <= config.MinimumDistance ).Should().BeTrue();
-      deltaPoints.All( p => p.Angle <= sequencer.GetMinAngleAtRadius( p.Radius) ).Should().BeTrue();
+      deltaPoints.Where( p => p > config.MinimumDistance ).Should().BeEmpty();
     }
 
     #endregion

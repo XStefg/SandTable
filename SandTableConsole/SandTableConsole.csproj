@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -10,5 +10,31 @@
       <HintPath>$(TargetDir)SandTableEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog.Extensions.Hosting" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="SampleThrFiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SampleThrFiles Include="$(SandTableRepositoryDir)SandTableConsole\SampleThrFiles\**\*.*" />
+  </ItemGroup>
+
+  <Target Name="CopySampleThrFiles" 
+          BeforeTargets="Build" 
+          Inputs="@(SampleThrFiles)" 
+          Outputs="@(SampleThrFiles">
+    <Message Text="Copying Sample Thr files..." Importance="high" />
+    <Copy SourceFiles="@(SampleThrFiles)"
+          DestinationFolder="$(MSBuildThisFileDirectory)\..\$(ConfigurationName)\$(TargetFramework)\SampleThrFiles\%(RecursiveDir)" 
+          SkipUnchangedFiles="true" 
+          ContinueOnError="true" />
+  </Target>
 
 </Project>

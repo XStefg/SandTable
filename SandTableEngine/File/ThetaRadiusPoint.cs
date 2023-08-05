@@ -18,7 +18,13 @@ public struct ThetaRadiusPoint
   #region Operators
 
   public static ThetaRadiusPoint operator -( ThetaRadiusPoint a, ThetaRadiusPoint b )
-    => new ThetaRadiusPoint{ Angle = a.Angle - b.Angle, Radius = a.Radius - b.Radius };
+    => new ThetaRadiusPoint { Angle = a.Angle - b.Angle, Radius = a.Radius - b.Radius };
+
+  public static ThetaRadiusPoint operator +( ThetaRadiusPoint a, ThetaRadiusPoint b )
+    => new ThetaRadiusPoint { Angle = a.Angle + b.Angle, Radius = a.Radius + b.Radius };
+
+  public static ThetaRadiusPoint operator /( ThetaRadiusPoint a, double b )
+    => new ThetaRadiusPoint { Angle = a.Angle / b, Radius = a.Radius / b };
 
   #endregion
 }

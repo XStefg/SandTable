@@ -1,6 +1,6 @@
 ﻿using SandTableEngine.Units;
 
-namespace SandTableEngine.Processor;
+namespace SandTableEngine.Processor.ThetaRadius;
 
 public class ThetaRadiusSequencerConfig : ProcessingConfigBase
 {
