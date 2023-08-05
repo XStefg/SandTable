@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using SandTableEngine.File;
 using SandTableEngine.Units;
 
 namespace SandTableEngine.Processor.ThetaRadius;
 
-public class ThetaRadiusSequencer : ProcessorBase<ThetaRadiusPoint, ThetaRadiusPoint, ThetaRadiusSequencerConfig>
+public class ThetaRadiusSequencer : ProcessorBase<ThetaRadiusSequencerConfig>, IProcessInput<ThetaRadiusPoint>, IProcessOutput<ThetaRadiusPoint>
 {
   #region CTOR
 
@@ -16,62 +17,61 @@ public class ThetaRadiusSequencer : ProcessorBase<ThetaRadiusPoint, ThetaRadiusP
 
   #endregion
 
-  #region Base class overrides
+  public IProcessOutput<ThetaRadiusPoint>? Input { get; set; }
 
-  public override bool Process( ProcessingBuffer<ThetaRadiusPoint> input )
+  public IEnumerable<ThetaRadiusPoint> ProcessSamples()
   {
-    List<ThetaRadiusPoint> output = new( input.Buffer );
-
-    if ( input.Buffer.Length < 2 )
+    if ( Input == null )
     {
-      m_OutputBuffer = new ProcessingBuffer<ThetaRadiusPoint> { Buffer = output.ToArray() };
+      yield break;
     }
 
-    int index = 0;
+    bool             firstPoint    = true;
+    ThetaRadiusPoint previousPoint = ThetaRadiusPoint.Empty;
 
-    if ( !m_LastPoint.IsEmpty )
+    foreach ( ThetaRadiusPoint currentPoint in Input.ProcessSamples() )
     {
-      output.Insert( 0, m_LastPoint );
-    }
-
-    while ( index < output.Count - 1 )
-    {
-      ThetaRadiusPoint currentPoint      = output[index];
-      ThetaRadiusPoint nextPoint         = output[index + 1];
-      ThetaRadiusPoint intermediatePoint = ( currentPoint + nextPoint ) / 2.0;
-
-      Distance distanceBetweenPoints = ThetaRadiusSequenceCalculator.GetDistanceBetweenPoints( currentPoint, nextPoint );
-
-      if ( distanceBetweenPoints < Config.MinimumDistance )
+      if ( firstPoint )
       {
-        index++;
+        firstPoint    = false;
+        previousPoint = currentPoint;
+        yield return currentPoint;
+        continue;
       }
-      else
+
+      foreach ( ThetaRadiusPoint betweenPoint in GetPointBetween( previousPoint, currentPoint ) )
       {
-        output.Insert( index + 1, intermediatePoint );
+        yield return betweenPoint;
       }
+
+      yield return currentPoint;
+
+      previousPoint = currentPoint;
     }
-
-    m_LastPoint = input.Buffer.Last();
-
-    m_OutputBuffer = new ProcessingBuffer<ThetaRadiusPoint> { Buffer = output.ToArray() };
-
-    return true;
   }
 
-  public override ProcessingBuffer<ThetaRadiusPoint> GetOutput() => m_OutputBuffer;
+  private IEnumerable<ThetaRadiusPoint> GetPointBetween( ThetaRadiusPoint previousPoint, ThetaRadiusPoint nextPoint )
+  {
+    Distance distanceBetweenPoints = ThetaRadiusSequenceCalculator.GetDistanceBetweenPoints( previousPoint, nextPoint );
 
-  #endregion
+    if ( distanceBetweenPoints < Config.MinimumDistance )
+    {
+      yield break;
+    }
+    else
+    {
+      ThetaRadiusPoint intermediatePoint = ( nextPoint + previousPoint ) / 2.0;
+      foreach ( ThetaRadiusPoint currentPoint in GetPointBetween( previousPoint, intermediatePoint ) )
+      {
+        yield return currentPoint;
+      }
 
-  #region Public Methods
+      yield return intermediatePoint;
 
-  #endregion
-
-  #region Private Variables
-
-  private ProcessingBuffer<ThetaRadiusPoint> m_OutputBuffer = ProcessingBuffer<ThetaRadiusPoint>.Empty;
-
-  private ThetaRadiusPoint m_LastPoint = ThetaRadiusPoint.Empty;
-
-  #endregion
+      foreach ( ThetaRadiusPoint currentPoint in GetPointBetween( intermediatePoint, nextPoint ) )
+      {
+        yield return currentPoint;
+      }
+    }
+  }
 }

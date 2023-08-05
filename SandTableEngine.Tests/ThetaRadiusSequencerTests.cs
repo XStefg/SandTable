@@ -36,23 +36,20 @@ namespace SandTableEngine.Tests
         new() { Radius = 1.0, Angle = Angle.CreateFromDegree( 360 ) },
       };
 
-      ProcessingBuffer<ThetaRadiusPoint> inputBuffer = new() { Buffer = points };
+      ThetaRadiusSequencerConfig config = new() { MinimumDistance = .050 };
 
-      ThetaRadiusSequencerConfig config = new ThetaRadiusSequencerConfig() { MinimumDistance = .050 };
-
-      ThetaRadiusSequencer sequencer = new( config );
+      ThetaRadiusSequencer sequencer = new( config ) { Input = points.Wrap() };
 
       // Act
-      sequencer.Process( inputBuffer );
-      ProcessingBuffer<ThetaRadiusPoint> outputBuffer = sequencer.GetOutput();
+      ThetaRadiusPoint[] outputBuffer = sequencer.ProcessSamples().ToArray();
 
       // Assert
-      outputBuffer.Buffer.Length.Should().Be( 92 );
-      outputBuffer.Buffer[0].Should().Be( points[0] );
-      outputBuffer.Buffer.Last().Should().Be( points.Last() );
+      outputBuffer.Length.Should().Be( 92 );
+      outputBuffer[0].Should().Be( points[0] );
+      outputBuffer.Last().Should().Be( points.Last() );
 
-      Distance[] deltaPoints = outputBuffer.Buffer
-                                           .Zip( outputBuffer.Buffer.Skip( 1 ),
+      Distance[] deltaPoints = outputBuffer
+                                           .Zip( outputBuffer.Skip( 1 ),
                                                  ( a, b ) => ThetaRadiusSequenceCalculator.GetDistanceBetweenPoints( a, b ) )
                                            .ToArray();
 
