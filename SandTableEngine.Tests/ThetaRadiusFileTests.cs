@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Eddyfi.Core.Test.Utilities;
+﻿using Eddyfi.Core.Test.Utilities;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SandTableEngine.File;
@@ -48,7 +45,7 @@ namespace SandTableEngine.Tests
 
     #endregion
 
-    TestFileDirectoryContext m_Context = new TestFileDirectoryContext( typeof( ThetaRadiusFileTests ) );
+    TestFileDirectoryContext m_Context = new( typeof( ThetaRadiusFileTests ) );
 
   }
 }
